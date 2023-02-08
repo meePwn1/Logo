@@ -1,0 +1,345 @@
+//========================================================================================================================================================
+
+.checkout {
+	margin-bottom: rem(30);
+	// .checkout__title
+	&__title {
+		margin-bottom: rem(20);
+	}
+	// .checkout__content
+	&__content {
+		margin-bottom: rem(45);
+		@media (max-width: $mobile) {
+			margin: 0 -15px 45px;
+		}
+	}
+	// .checkout__order
+	&__order {
+	}
+}
+.order-checkout {
+	// .order-checkout__title
+	&__title {
+		margin-bottom: rem(30);
+	}
+	// .order-checkout__items
+	&__items {
+	}
+	// .order-checkout__item
+	&__item {
+		margin-bottom: rem(10);
+	}
+	// .order-checkout__footer
+	&__footer {
+		text-align: right;
+		padding-top: 10px;
+	}
+	// .order-checkout__total
+	&__total {
+		font-weight: 900;
+		color: #333;
+		font-size: 24px;
+		text-transform: uppercase;
+		margin-bottom: rem(25);
+		span {
+			color: #f68038;
+			font-size: 36px;
+			&::after {
+				content: "\20BD";
+				font-size: 24px;
+			}
+		}
+		@media (max-width: $mobile) {
+			font-size: 20px;
+			margin-bottom: rem(15);
+			span {
+				font-size: rem(25);
+				&::after {
+					font-size: 18px;
+				}
+			}
+		}
+	}
+	// .order-checkout__btn
+	&__btn {
+		color: #fff;
+		font-weight: 900;
+		font-size: 14px;
+		padding: 11px 20px;
+		display: inline-flex;
+		justify-content: center;
+		align-items: center;
+		background-color: #f68038;
+		border-radius: 20px;
+	}
+}
+.item-order {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	border: 1px solid #f5f5f5;
+	padding: 15px 20px;
+	position: relative;
+	column-gap: 30px;
+	flex-wrap: wrap;
+	@media (max-width: $mobile) {
+		padding: 15px;
+	}
+	// .item-order__content
+	&__content {
+		display: flex;
+		column-gap: 30px;
+		flex: 0 1 50%;
+		@media (max-width: $mobile) {
+			flex: 1 1 100%;
+			margin-bottom: rem(30);
+			padding-right: 30px;
+			column-gap: 10px;
+		}
+	}
+	// .item-order__image
+	&__image {
+		max-height: 100px;
+		flex: 0 0 110px;
+		align-self: center;
+		img {
+			max-width: 100%;
+			max-height: 100%;
+		}
+		@media (max-width: $mobile) {
+			flex: 0 0 80px;
+		}
+	}
+	// .item-order__body
+	&__body {
+		align-self: center;
+	}
+	// .item-order__title
+	&__title {
+		font-size: 14px;
+		font-weight: 300;
+		color: #36949f;
+		margin-bottom: rem(14);
+		display: inline-block;
+		span {
+			font-weight: 900;
+		}
+	}
+	// .item-order__price
+	&__price {
+		font-size: 24px;
+		color: #333;
+		font-weight: 900;
+		&::after {
+			content: "\20BD";
+			font-size: 20px;
+		}
+		@media (max-width: $mobileSmall) {
+			font-size: 18px;
+		}
+	}
+	// .item-order__quantity
+	&__quantity {
+		flex: 1 1 auto;
+	}
+	// .item-order__total
+	&__total {
+		flex: 1 1 auto;
+		@media (max-width: $mobile) {
+			text-align: right;
+		}
+	}
+	// .item-order__label
+	&__label {
+		color: #999;
+		font-size: 16px;
+		font-weight: 300;
+		margin-bottom: rem(14);
+		@media (max-width: $mobile) {
+			margin-bottom: rem(10);
+		}
+	}
+	// .item-order__delete
+	&__delete {
+		position: absolute;
+		top: 15px;
+		right: 20px;
+		width: 16px;
+		height: 16px;
+		display: inline-block;
+		background: url("@img/checkout-page/delete.png") center no-repeat;
+		transition: background-image 0.3s ease 0s;
+		@media (any-hover: hover) {
+			&:hover {
+				background: url("@img/checkout-page/delete-hover.png") center no-repeat;
+			}
+		}
+	}
+}
+
+.content-checkout {
+	padding: 20px;
+	background-color: #fafafa;
+	@media (max-width: $mobile) {
+		padding: 0;
+	}
+	// .tabs__navigation
+	.tabs__navigation {
+		@media (min-width: $tablet) {
+			column-gap: 30px;
+		}
+		@media (max-width: $tablet) {
+			flex-wrap: wrap;
+		}
+	}
+	// .tabs__title
+	.tabs__title {
+		font-size: 14px;
+		font-weight: 900;
+		color: #72c9d4;
+		border: none;
+		text-decoration: underline dashed;
+		border-radius: 0;
+		padding: 20px;
+		text-transform: uppercase;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		@media (max-width: $tablet) {
+			flex: 1 1 100%;
+		}
+		&._tab-active {
+			text-decoration: none;
+			color: #fff;
+			background-color: #72c9d4;
+		}
+	}
+	// .tabs__content
+	.tabs__content {
+		padding: 30px 20px 0;
+		border: none;
+		@media (max-width: $mobile) {
+			padding: 30px 20px 20px;
+		}
+	}
+	// .tabs__body
+	.tabs__body {
+	}
+	// .content-checkout__row
+	&__row {
+		@media (min-width: $pc) {
+			display: flex;
+			column-gap: 44px;
+		}
+	}
+	// .content-checkout__column
+	&__column {
+		flex: 0 1 60%;
+		&:last-child {
+			flex: 0 1 40%;
+		}
+		@media (max-width: $pc) {
+			&:not(:last-child) {
+				margin-bottom: 10px;
+			}
+		}
+	}
+	// .content-checkout__text
+	&__text {
+		p {
+			color: #666;
+			font-weight: 300;
+			line-height: math.div(18, 12);
+			&:not(:last-child) {
+				margin-bottom: 30px;
+			}
+			@media (max-width: $tablet) {
+				&:not(:last-child) {
+					margin-bottom: 20px;
+				}
+			}
+			span {
+				color: #f68038;
+			}
+		}
+	}
+	// .content-checkout__line
+	&__line {
+		.select_content-checkout {
+			width: 100%;
+			.select__value {
+				&::after {
+					margin: 0;
+				}
+			}
+			.select__content {
+				color: inherit;
+			}
+		}
+		&:not(:last-child) {
+			margin-bottom: rem(10);
+		}
+		.form__error {
+			color: rgb(255, 18, 18);
+			margin: 5px 0;
+		}
+		@media (min-width: $mobile) {
+			display: flex;
+			column-gap: 15px;
+			justify-content: space-between;
+			align-items: center;
+		}
+	}
+	// .content-checkout__label
+	&__label {
+		flex: 0 0 120px;
+		font-size: 14px;
+		font-weight: 900;
+		@media (max-width: $mobile) {
+			&:not(:last-child) {
+				margin-bottom: 10px;
+			}
+		}
+		span {
+			color: #f68038;
+		}
+	}
+	// .content-checkout__input
+	&__input {
+		height: 30px;
+		flex: 1 1 auto;
+		outline: none;
+		padding: 0 15px;
+		// .checkbox__input
+		.checkbox__input {
+			&:checked + .checkbox__label::after {
+				display: block;
+			}
+			&:checked + .checkbox__label::before {
+				border: 2px solid #009aaf;
+			}
+		}
+		// .checkbox__label
+		.checkbox__label {
+			&::before {
+				border: 1px solid #e5e5e5;
+				background-color: #ffffff;
+			}
+		}
+		// .checkbox__text
+		.checkbox__text {
+			font-weight: 300;
+			color: #666;
+		}
+	}
+	// .content-checkout__textarea
+	&__textarea {
+		padding: 15px;
+		flex: 1 1 auto;
+		outline-color: $blueColor;
+		height: 120px;
+		line-height: 16px;
+		resize: none;
+		width: 100%;
+	}
+}

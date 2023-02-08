@@ -1,0 +1,53 @@
+//<QUANTITY>
+// Сніппет (HTML): qa
+.quantity {
+	max-width: 120px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	column-gap: 15px;
+	// .quantity__button
+	&__button {
+		flex: 0 0 18px;
+		height: 16px;
+		position: relative;
+		cursor: pointer;
+
+		// .quantity__button_plus
+		&_plus {
+			background: url("@img/product-page/arrow-product-info-grey.png") center no-repeat;
+			transform: rotate(180deg);
+			@media (any-hover: hover) {
+				&:hover {
+					background: url("@img/product-page/arrow-product-info.png") center no-repeat;
+					transform: rotate(0deg);
+				}
+			}
+		}
+		// .quantity__button_minus
+		&_minus {
+			background: url("@img/product-page/arrow-product-info-grey.png") center no-repeat;
+			@media (any-hover: hover) {
+				&:hover {
+					background: url("@img/product-page/arrow-product-info.png") center no-repeat;
+					transform: rotate(180deg);
+				}
+			}
+		}
+	}
+	// .quantity__input
+	&__input {
+		flex: 0 0 56px;
+		height: 33px;
+		border: 2px solid #e5e5e5;
+		input {
+			outline: none;
+			height: 100%;
+			color: #999;
+			font-size: 16px;
+			font-weight: 900;
+			width: 100%;
+			text-align: center;
+		}
+	}
+}
