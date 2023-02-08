@@ -1,6 +1,6 @@
 //====================================================================================================
 .header {
-	position: fixed;
+	position: fixed !important;
 	width: 100%;
 	background: #fff url("@img/bg_header.jpg") top no-repeat;
 	z-index: 10;
